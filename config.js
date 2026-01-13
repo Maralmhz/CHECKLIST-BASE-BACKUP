@@ -1,19 +1,26 @@
-// ============================================
-// CONFIG.JS - TEMPLATE COMPLETO NEUTRO
-// ============================================
-// Para usar: Edite apenas os valores entre aspas
-// Depois de editar, substitua logo.png pela logo da oficina
+// CONFIG.JS - AUTOSERVICE
+// Copacabana, MG - Checklist de Entrada (da sua base neutra)
 
 window.OFICINA_CONFIG = {
-    // === INFORMAÇÕES DA OFICINA ===
-    nome: "OFICINA",                                    // Nome principal
-    subtitulo: "CHECKLIST DE ENTRADA E INSPEÇÃO",       // Subtítulo header
+    nome: "AutoService",
+    endereco: "Rua das Oficinas, 123 - Copacabana, MG",
+    cnpj: "12.345.678/0001-99",
+    telefone: "(35) 99999-1234",
+    email: "contato@autoservice.com.br",
     
-    // === CONTATOS ===
-    telefone: "(00) 00000-0000",                        // Telefone fixo
-    whatsapp: "(00) 00000-0000",                        // WhatsApp principal
-    telefone2: "(00) 0000-0000",                        // Telefone 2 (opcional)
+    logo: "logo.png",  // Sua logo será subida
     
-    // === ENDEREÇO ===
-    endereco: "RUA EXEMPLO, 000 - BAIRRO - CIDADE/UF",  // Endereço completo
-    cep: "00000
+    // Cores extraídas da sua logo
+    corPrimaria: "#FF6600",  // Laranja vibrante
+    corSecundaria: "#C0C0C0", // Prata engrenagem
+    corFundo: "#000000",     // Preto fundo
+    
+    // Checklist mantido (edite itens conforme necessidade)
+    checklist: [
+        {categoria: "Dados do Veículo", itens: ["Placa", "Modelo/Ano", "KM Entrada", "Combustível", "Chassi"]},
+        {categoria: "Externo", itens: ["Pneus", "Faróis", "Retrovisores", "Lataria", "Para-choque", "Vidros"]},
+        {categoria: "Interno", itens: ["Painel", "Cintos", "Ar-condicionado", "Bateria", "Itens pessoais"]},
+        {categoria: "Mecânica", itens: ["Óleo", "Freios", "Suspensão", "Correias", "Fluídos"]},
+        {categoria: "Segurança", itens: ["Extintor", "Palhetas", "Escape"]}
+    ]
+};
