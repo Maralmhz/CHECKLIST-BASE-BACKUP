@@ -37,16 +37,17 @@ font-size: 13px;
 }
 }
 
-/* PALETA NEUTRA (será sobrescrita depois via config.js, se quiser) */
+/* PALETA AUTOSERVICE - Suas cores da logo */
 :root {
---color-primary: #555555; /* antes vermelho Fast Car */
---color-dark: #222222;
---color-light: #ffffff; /* fundo geral */
---color-text: #333333;
---color-border: #dddddd;
---color-success: #27ae60;
---color-error: #e74c3c;
---color-warning: #f39c12;
+    --color-primary: #FF6600;    /* Laranja */
+    --color-secondary: #C0C0C0;  /* Prata */
+    --color-dark: #000000;       /* Preto fundo */
+    --color-light: #1A1A1A;      /* Fundo container */
+    --color-text: #FFFFFF;       /* Texto branco */
+    --color-border: #444444;
+    --color-success: #27ae60;
+    --color-error: #e74c3c;
+    --color-warning: #f39c12;
 }
 
 * {
@@ -705,4 +706,13 @@ padding-top: 20px;
 .hidden {
 display: none !important;
 }
+.header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
+}
+
+body {
+    background-color: var(--color-dark) !important;
+}
+
 </style>
+
