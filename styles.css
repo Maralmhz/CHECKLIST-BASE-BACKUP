@@ -11,7 +11,7 @@
     bottom: 16px;
     right: 16px;
 
-    background: #555555;          /* neutro */
+background: #27ae60;  /* verde sucesso */
     color: #ffffff;
 
     border: none;
@@ -706,3 +706,4 @@ button {
     display: none !important;
 }
 </style>
+
