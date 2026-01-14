@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Checklist de Oficina Fast Car - App Offline com PDF">
+    <meta name="description" content="Checklist de Oficina - App Offline com PDF">
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="icon" type="image/png" href="logo.png">
-   <title id="titulo-pagina">Checklist de Entrada â€“ Oficina</title>
+   <title id="titulo-pagina">Checklist de Entrada – Oficina</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
@@ -19,14 +19,15 @@
         <img id="logo-oficina" src="logo.png" alt="Logo da Oficina">
     </div>
     <div class="header-content">
-        <h1 id="nome-oficina">Fast Car Centro Automotivo</h1>
-        <p id="subtitulo-oficina">Checklist de entrada e inspeÃ§Ã£o veicular</p>
+        <!-- ✅ NEUTRO - PREENCHER NO CONFIG.JS -->
+        <h1 id="nome-oficina">OFICINA</h1>
+        <p id="subtitulo-oficina">Checklist de entrada e inspeção veicular</p>
         <div class="contato-info">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-            <span id="telefone-oficina">(31) 99457-9274</span>
+            <span id="telefone-oficina">(00) 00000-0000</span>
         </div>
         <div class="endereco-oficina" id="endereco-oficina">
-            Av. RÃ©gulus, 248 - Jardim Riacho das Pedras, Contagem - MG, 32241-210 Â· Tel: (31) 2342-1699
+            ENDEREÇO DA OFICINA
         </div>
 
                 <div class="status-sync">
@@ -37,11 +38,11 @@
             <div class="header-badge">v3.0 PRO</div>
         </div>
 <div class="tabs">
-    <button class="tab-button active" onclick="switchTab('novo-checklist')">âž• Novo Checklist</button>
-    <button class="tab-button" onclick="switchTab('orcamento')">ðŸ’° PeÃ§as & ServiÃ§os</button>
-    <button class="tab-button" onclick="switchTab('fotos')">ðŸ“¸ Fotos</button>
-    <button class="tab-button" onclick="switchTab('historico')">ðŸ“‹ HistÃ³rico</button>
-    <button class="tab-button" onclick="switchTab('relatorios')">ðŸ“Š RelatÃ³rios</button>
+    <button class="tab-button active" onclick="switchTab('novo-checklist')">➕ Novo Checklist</button>
+    <button class="tab-button" onclick="switchTab('orcamento')">💰 Peças & Serviços</button>
+    <button class="tab-button" onclick="switchTab('fotos')">📸 Fotos</button>
+    <button class="tab-button" onclick="switchTab('historico')">📋 Histórico</button>
+    <button class="tab-button" onclick="switchTab('relatorios')">📊 Relatórios</button>
 </div>
 
 
@@ -53,9 +54,9 @@
                 <div id="infoMessage" class="alert alert-info"></div>
 
                 <form id="checklistForm">
-                    <div class="section-title">ðŸ“‹ INFORMAÃ‡Ã•ES DO VEÃCULO</div>
+                    <div class="section-title">📋 INFORMAÇÕES DO VEÍCULO</div>
 
-                    <!-- RESUMO FIXO DO VEÃCULO (VISUAL) -->
+                    <!-- RESUMO FIXO DO VEÍCULO (VISUAL) -->
                     <div class="veiculo-resumo" id="resumoVeiculoPrincipal">
                         <div class="veiculo-resumo-pill">Placa: <strong id="resumoPlaca">-</strong></div>
                         <div class="veiculo-resumo-pill">Modelo: <strong id="resumoModelo">-</strong></div>
@@ -63,7 +64,7 @@
                         <div class="veiculo-resumo-pill">KM Entrada: <strong id="resumoKmEntrada">-</strong></div>
                         <div class="veiculo-resumo-pill">Data Entrada: <strong id="resumoData">-</strong></div>
                         <div class="veiculo-resumo-pill">Hora Entrada: <strong id="resumoHora">-</strong></div>
-                        <div class="veiculo-resumo-pill">CombustÃ­vel: <strong id="resumoCombustivel">-</strong></div>
+                        <div class="veiculo-resumo-pill">Combustível: <strong id="resumoCombustivel">-</strong></div>
                     </div>
 
                     <div class="form-row">
@@ -73,7 +74,7 @@
                         </div>
                         <div class="form-group">
                             <label for="chassi">Chassi</label>
-                            <input type="text" id="chassi" name="chassi" placeholder="17 dÃ­gitos" maxlength="17">
+                            <input type="text" id="chassi" name="chassi" placeholder="17 dígitos" maxlength="17">
                         </div>
                     </div>
 
@@ -101,7 +102,7 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="combustivel">NÃ­vel CombustÃ­vel</label>
+                            <label for="combustivel">Nível Combustível</label>
                             <select id="combustivel" name="combustivel">
                                 <option value="">Selecione...</option>
                                 <option value="cheio">Cheio</option>
@@ -111,25 +112,25 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="km_saida">KM SaÃ­da</label>
+                            <label for="km_saida">KM Saída</label>
                             <input type="text" id="km_saida" name="km_saida" placeholder="150.500">
                         </div>
                     </div>
 
-                    <div class="section-title">ðŸš— CARACTERÃSTICAS DO VEÃCULO</div>
+                    <div class="section-title">🚗 CARACTERÍSTICAS DO VEÍCULO</div>
 
                     <div class="equip-section">
-                        <div class="equip-section-title">ðŸ”§ ACESSÃ“RIOS OBRIGATÃ“RIOS</div>
+                        <div class="equip-section-title">🔧 ACESSÓRIOS OBRIGATÓRIOS</div>
                         <div class="checkbox-group">
                             <div class="checkbox-item"><input type="checkbox" id="estepe" name="equipamentos" value="ESTEPE"><label for="estepe">ESTEPE</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="macaco" name="equipamentos" value="MACACO"><label for="macaco">MACACO</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="chave_roda" name="equipamentos" value="CHAVE DE RODA"><label for="chave_roda">CHAVE DE RODA</label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="triangulo" name="equipamentos" value="TRIÃ‚NGULO"><label for="triangulo">TRIÃ‚NGULO</label></div>
+                            <div class="checkbox-item"><input type="checkbox" id="triangulo" name="equipamentos" value="TRIÂNGULO"><label for="triangulo">TRIÂNGULO</label></div>
                         </div>
                     </div>
 
 <div class="equip-section">
-    <div class="equip-section-title">â›½ TIPO COMBUSTÃVEL</div>
+    <div class="equip-section-title">⛽ TIPO COMBUSTÍVEL</div>
     <div class="checkbox-group">
         <div class="checkbox-item"><input type="checkbox" id="gasolina" name="equipamentos" value="GASOLINA"><label for="gasolina">GASOLINA</label></div>
         <div class="checkbox-item"><input type="checkbox" id="etanol" name="equipamentos" value="ETANOL"><label for="etanol">ETANOL</label></div>
@@ -141,9 +142,9 @@
 
 
                     <div class="equip-section">
-                        <div class="equip-section-title">ðŸ”Š ELETRÃ”NICOS</div>
+                        <div class="equip-section-title">🔊 ELETRÔNICOS</div>
                         <div class="checkbox-group">
-                            <div class="checkbox-item"><input type="checkbox" id="radio" name="equipamentos" value="RÃDIO / MULTIMÃDIA"><label for="radio">RÃDIO / MULTIMÃDIA</label></div>
+                            <div class="checkbox-item"><input type="checkbox" id="radio" name="equipamentos" value="RÁDIO / MULTIMÍDIA"><label for="radio">RÁDIO / MULTIMÍDIA</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="alarme_corta" name="equipamentos" value="ALARME / CORTA CORRENTE"><label for="alarme_corta">ALARME / CORTA CORRENTE</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="antena" name="equipamentos" value="ANTENA"><label for="antena">ANTENA</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="acendedor" name="equipamentos" value="ACENDEDOR/TOMADA 12V"><label for="acendedor">ACENDEDOR/TOMADA 12V</label></div>
@@ -151,27 +152,27 @@
                     </div>
 
                     <div class="equip-section">
-                        <div class="equip-section-title">âš¡ ELÃ‰TRICOS</div>
+                        <div class="equip-section-title">⚡ ELÉTRICOS</div>
                         <div class="checkbox-group">
-                            <div class="checkbox-item"><input type="checkbox" id="vidro_eletrico" name="equipamentos" value="VIDRO ELÃ‰TRICO"><label for="vidro_eletrico">VIDRO ELÃ‰TRICO</label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="trava_eletrica" name="equipamentos" value="TRAVA ELÃ‰TRICA"><label for="trava_eletrica">TRAVA ELÃ‰TRICA</label></div>
+                            <div class="checkbox-item"><input type="checkbox" id="vidro_eletrico" name="equipamentos" value="VIDRO ELÉTRICO"><label for="vidro_eletrico">VIDRO ELÉTRICO</label></div>
+                            <div class="checkbox-item"><input type="checkbox" id="trava_eletrica" name="equipamentos" value="TRAVA ELÉTRICA"><label for="trava_eletrica">TRAVA ELÉTRICA</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="buzina" name="equipamentos" value="BUZINA"><label for="buzina">BUZINA</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="bateria" name="equipamentos" value="BATERIA"><label for="bateria">BATERIA</label></div>
                         </div>
                     </div>
 
                     <div class="equip-section">
-                        <div class="equip-section-title">ðŸ›ž RODAS & PÃRA-BRISAS</div>
+                        <div class="equip-section-title">🛞 RODAS & PÁRA-BRISAS</div>
                         <div class="checkbox-group">
                             <div class="checkbox-item"><input type="checkbox" id="calotas" name="equipamentos" value="CALOTAS"><label for="calotas">CALOTAS</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="rodas_liga" name="equipamentos" value="RODAS DE LIGA"><label for="rodas_liga">RODAS DE LIGA</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="roda_ferro" name="equipamentos" value="RODA DE FERRO"><label for="roda_ferro">RODA DE FERRO</label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="para_brisa" name="equipamentos" value="PARABRISA TRINCADO"><label for="para_brisa">PÃRA BRISA TRICADO</label></div>
+                            <div class="checkbox-item"><input type="checkbox" id="para_brisa" name="equipamentos" value="PARABRISA TRINCADO"><label for="para_brisa">PÁRA BRISA TRICADO</label></div>
                         </div>
                     </div>
 
                     <div class="equip-section">
-    <div class="equip-section-title">ðŸ“¦ DEMAIS ACESSÃ“RIOS</div>
+    <div class="equip-section-title">📦 DEMAIS ACESSÓRIOS</div>
     <div class="checkbox-group">
         <div class="checkbox-item"><input type="checkbox" id="extintor" name="equipamentos" value="EXTINTOR"><label for="extintor">EXTINTOR</label></div>
         <div class="checkbox-item"><input type="checkbox" id="protetor_carter" name="equipamentos" value="PROTETOR DE CARTER"><label for="protetor_carter">PROTETOR DE CARTER</label></div>
@@ -182,7 +183,7 @@
 
 
                     <div class="equip-section">
-                        <div class="equip-section-title">â­ EQUIPAMENTOS PRINCIPAIS</div>
+                        <div class="equip-section-title">⭐ EQUIPAMENTOS PRINCIPAIS</div>
                         <div class="checkbox-group">
                             <div class="checkbox-item"><input type="checkbox" id="ar" name="caracteristicas" value="AR"><label for="ar">AR</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="abs" name="caracteristicas" value="ABS"><label for="abs">ABS</label></div>
@@ -192,14 +193,14 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>CÃ¢mbio</label>
+                            <label>Câmbio</label>
                             <div class="checkbox-group" style="margin-top: 5px;">
-                                <div class="checkbox-item"><input type="checkbox" id="cambio_auto" name="cambio" value="AutomÃ¡tico"><label for="cambio_auto">AutomÃ¡tico</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="cambio_auto" name="cambio" value="Automático"><label for="cambio_auto">Automático</label></div>
                                 <div class="checkbox-item"><input type="checkbox" id="cambio_manual" name="cambio" value="Manual"><label for="cambio_manual">Manual</label></div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>TraÃ§Ã£o</label>
+                            <label>Tração</label>
                             <div class="checkbox-group" style="margin-top: 5px;">
                                 <div class="checkbox-item"><input type="checkbox" id="tracao_4x2" name="tracao" value="4x2"><label for="tracao_4x2">4x2</label></div>
                                 <div class="checkbox-item"><input type="checkbox" id="tracao_4x4" name="tracao" value="4x4"><label for="tracao_4x4">4x4</label></div>
@@ -207,7 +208,7 @@
                         </div>
                     </div>
 
-                    <div class="section-title">ðŸ‘¤ DADOS DO CLIENTE</div>
+                    <div class="section-title">👤 DADOS DO CLIENTE</div>
 
                     <div class="form-row">
                         <div class="form-group">
@@ -222,8 +223,8 @@
 
                     <div class="form-row full">
                         <div class="form-group">
-                            <label for="endereco_cliente">EndereÃ§o Completo</label>
-                            <textarea id="endereco_cliente" name="endereco_cliente" placeholder="Rua, nÃºmero, bairro, cidade - UF, CEP" style="height: 60px; min-height: 60px;"></textarea>
+                            <label for="endereco_cliente">Endereço Completo</label>
+                            <textarea id="endereco_cliente" name="endereco_cliente" placeholder="Rua, número, bairro, cidade - UF, CEP" style="height: 60px; min-height: 60px;"></textarea>
                         </div>
                     </div>
 
@@ -238,43 +239,43 @@
                         </div>
                     </div>
 
-                    <div class="section-title">ðŸ”§ SERVIÃ‡OS/SOLICITADOS</div>
+                    <div class="section-title">🔧 SERVIÇOS/SOLICITADOS</div>
 
                     <div class="form-row full">
                         <div class="form-group">
-                            <label for="servicos">Descreva os serviÃ§os solicitados:</label>
-                            <textarea id="servicos" name="servicos" placeholder="Ex: Troca de Ã³leo e filtro, alinhamento e balanceamento..."></textarea>
+                            <label for="servicos">Descreva os serviços solicitados:</label>
+                            <textarea id="servicos" name="servicos" placeholder="Ex: Troca de óleo e filtro, alinhamento e balanceamento..."></textarea>
                         </div>
                     </div>
 
                     <div class="action-buttons">
-                        <button type="button" class="btn-success" onclick="gerarPDF()">ðŸ“„ Gerar PDF</button>
-                        <button type="button" class="btn-secondary" onclick="limparFormulario()">ðŸ—‘ï¸ Limpar</button>
+                        <button type="button" class="btn-success" onclick="gerarPDF()">📄 Gerar PDF</button>
+                        <button type="button" class="btn-secondary" onclick="limparFormulario()">🗑️ Limpar</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <!-- ABA HISTÃ“RICO -->
+        <!-- ABA HISTÓRICO -->
         <div id="historico" class="tab-content">
             <div class="content">
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="ðŸ” Buscar por placa, modelo ou cliente..." onkeyup="filtrarChecklists()">
-                    <button class="btn-secondary btn-small" onclick="ordenarChecklists()">ðŸ“Š Ordenar</button>
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar por placa, modelo ou cliente..." onkeyup="filtrarChecklists()">
+                    <button class="btn-secondary btn-small" onclick="ordenarChecklists()">📊 Ordenar</button>
                 </div>
 
                 <div id="checklistsList"></div>
                 <div id="emptyMessage" style="text-align: center; padding: 40px; color: #999;">
-                    <p style="font-size: 40px; margin-bottom: 10px;">ðŸ“­</p>
-                    <p>Nenhum checklist salvo ainda. Crie um novo para comeÃ§ar!</p>
+                    <p style="font-size: 40px; margin-bottom: 10px;">📭</p>
+                    <p>Nenhum checklist salvo ainda. Crie um novo para começar!</p>
                 </div>
             </div>
         </div>
 
-        <!-- ABA RELATÃ“RIOS -->
+        <!-- ABA RELATÓRIOS -->
         <div id="relatorios" class="tab-content">
             <div class="content">
-                <div class="section-title">ðŸ“Š ESTATÃSTICAS GERAIS</div>
+                <div class="section-title">📊 ESTATÍSTICAS GERAIS</div>
                 <div class="stats-box">
                     <div class="stat-card">
                         <div class="stat-number" id="totalChecklists">0</div>
@@ -282,26 +283,26 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" id="checklistsMes">0</div>
-                        <div class="stat-label">Checklists MÃªs Atual</div>
+                        <div class="stat-label">Checklists Mês Atual</div>
                     </div>
                 </div>
 
-                <div class="section-title">ðŸš— MARCAS MAIS ATENDIDAS</div>
+                <div class="section-title">🚗 MARCAS MAIS ATENDIDAS</div>
                 <div id="graficoMarcas" style="margin-top: 20px;"></div>
 
                 <div class="action-buttons">
-                    <button class="btn-primary" onclick="exportarDados()">ðŸ’¾ Exportar Todos (JSON)</button>
-                    <button class="btn-danger" onclick="limparTodosDados()">ðŸ—‘ï¸ Limpar HistÃ³rico</button>
+                    <button class="btn-primary" onclick="exportarDados()">💾 Exportar Todos (JSON)</button>
+                    <button class="btn-danger" onclick="limparTodosDados()">🗑️ Limpar Histórico</button>
                 </div>
             </div>
         </div>
 
-        <!-- ABA ORÃ‡AMENTO â€“ PLANILHA DE PEÃ‡AS & SERVIÃ‡OS -->
+        <!-- ABA ORÇAMENTO – PLANILHA DE PEÇAS & SERVIÇOS -->
         <div id="orcamento" class="tab-content">
             <div class="content">
-                <div class="section-title">ðŸ’° PEÃ‡AS & SERVIÃ‡OS</div>
+                <div class="section-title">💰 PEÇAS & SERVIÇOS</div>
 
-                <!-- RESUMO FIXO DO VEÃCULO TAMBÃ‰M NA ABA DE PEÃ‡AS -->
+                <!-- RESUMO FIXO DO VEÍCULO TAMBÉM NA ABA DE PEÇAS -->
                 <div class="veiculo-resumo" id="resumoVeiculoOrcamento">
                     <div class="veiculo-resumo-pill">Placa: <strong id="resumoPlaca2">-</strong></div>
                     <div class="veiculo-resumo-pill">Modelo: <strong id="resumoModelo2">-</strong></div>
@@ -323,10 +324,10 @@
                     </div>
                 </div>
 
-                <!-- FORMULÃRIO TIPO PLANILHA -->
+                <!-- FORMULÁRIO TIPO PLANILHA -->
                 <div class="form-row two">
                     <div class="form-group">
-                        <label for="descricaoItem">PeÃ§a / ServiÃ§o</label>
+                        <label for="descricaoItem">Peça / Serviço</label>
                         <input type="text" id="descricaoItem" placeholder="Ex: PARACHOQUE DIANTEIRO">
                     </div>
                     <div class="form-group">
@@ -337,7 +338,7 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <button type="button" class="btn-primary" onclick="adicionarItemManual()">âž• Adicionar linha</button>
+                        <button type="button" class="btn-primary" onclick="adicionarItemManual()">➕ Adicionar linha</button>
                     </div>
                 </div>
 
@@ -346,9 +347,9 @@
                     <table style="width:100%; border-collapse:collapse; font-size:13px;">
                         <thead>
                             <tr style="background:#f7f7f7;">
-                                <th style="border:1px solid #ddd; padding:6px; text-align:left;">PeÃ§a / ServiÃ§o</th>
+                                <th style="border:1px solid #ddd; padding:6px; text-align:left;">Peça / Serviço</th>
                                 <th style="border:1px solid #ddd; padding:6px; text-align:right;">Valor (R$)</th>
-                                <th style="border:1px solid #ddd; padding:6px; text-align:center;">AÃ§Ãµes</th>
+                                <th style="border:1px solid #ddd; padding:6px; text-align:center;">Ações</th>
                             </tr>
                         </thead>
                         <tbody id="tabelaItens"></tbody>
@@ -363,16 +364,16 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button type="button" class="btn-success" onclick="gerarPDF()">ðŸ“„ Gerar PDF</button>
+                    <button type="button" class="btn-success" onclick="gerarPDF()">📄 Gerar PDF</button>
                 </div>
             </div>
         </div>
-<!-- ABA FOTOS âœ… PERFEITA -->
+<!-- ABA FOTOS ✅ PERFEITA -->
 <div id="fotos" class="tab-content">
     <div class="content">
-        <div class="section-title">ðŸ“¸ FOTOS DO VEÃCULO</div>
+        <div class="section-title">📸 FOTOS DO VEÍCULO</div>
         
-        <!-- RESUMO VEÃCULO -->
+        <!-- RESUMO VEÍCULO -->
         <div class="veiculo-resumo" id="resumoVeiculoFotos">
             <div class="veiculo-resumo-pill">Placa: <strong id="resumoPlaca3">-</strong></div>
             <div class="veiculo-resumo-pill">Modelo: <strong id="resumoModelo3">-</strong></div>
@@ -380,33 +381,33 @@
             <div class="veiculo-resumo-pill">KM: <strong id="resumoKmFotos">-</strong></div>
         </div>
 
-        <!-- BOTÃ•ES -->
+        <!-- BOTÕES -->
         <div class="form-row">
             <div class="form-group">
-                <button type="button" class="btn-primary" onclick="iniciarCamera()">ðŸ“· Tirar Foto</button>
+                <button type="button" class="btn-primary" onclick="iniciarCamera()">📷 Tirar Foto</button>
             </div>
             <div class="form-group">
                 <input type="file" id="uploadFotos" multiple accept="image/*" onchange="adicionarFotos(event)">
-                <label for="uploadFotos" class="btn-secondary" style="cursor:pointer; padding:12px 24px; display:block; text-align:center;">ðŸ“ Galeria</label>
+                <label for="uploadFotos" class="btn-secondary" style="cursor:pointer; padding:12px 24px; display:block; text-align:center;">📁 Galeria</label>
             </div>
         </div>
 
-        <!-- CÃ‚MERA -->
+        <!-- CÂMERA -->
         <div class="camera-container" style="display:none;">
             <video id="cameraPreview" autoplay playsinline style="width:100%; max-width:400px; height:300px; border-radius:12px; border:3px solid #e41616; background:#000;"></video>
             <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
-                <button class="btn-success btn-small" onclick="tirarFoto()" id="btnTirarFoto" style="display:none;">ðŸ“¸ Capturar</button>
-                <button class="btn-secondary btn-small" onclick="pararCamera()">âŒ Cancelar</button>
+                <button class="btn-success btn-small" onclick="tirarFoto()" id="btnTirarFoto" style="display:none;">📸 Capturar</button>
+                <button class="btn-secondary btn-small" onclick="pararCamera()">❌ Cancelar</button>
             </div>
         </div>
 
         <!-- GALERIA -->
-        <div class="section-title">Galeria de Fotos (MÃ¡x 15)</div>
+        <div class="section-title">Galeria de Fotos (Máx 15)</div>
         <div id="galeriaFotos" class="fotos-grid"></div>
 
         <div class="action-buttons">
-            <button type="button" class="btn-success" onclick="gerarPDFFotos()">ðŸ“„ PDF Fotos</button>
-            <button type="button" class="btn-danger" onclick="limparFotos()">ðŸ—‘ï¸ Limpar Fotos</button>
+            <button type="button" class="btn-success" onclick="gerarPDFFotos()">📄 PDF Fotos</button>
+            <button type="button" class="btn-danger" onclick="limparFotos()">🗑️ Limpar Fotos</button>
         </div>
     </div>
 </div>
@@ -433,7 +434,7 @@ function salvarChecklist() {
         }
     });
 
-    // peÃ§as adicionadas dinamicamente
+    // peças adicionadas dinamicamente
     dados.pecas = [];
     document.querySelectorAll('.linha-peca').forEach(linha => {
         const peca = {};
@@ -465,7 +466,7 @@ function salvarChecklist() {
 
             if (tabId === 'historico') carregarHistorico();
             if (tabId === 'relatorios') atualizarRelatorios();
-            if (tabId === 'orcamento') atualizarResumoVeiculo(); // garante resumo atualizado ao abrir PeÃ§as
+            if (tabId === 'orcamento') atualizarResumoVeiculo(); // garante resumo atualizado ao abrir Peças
         }
 
         function salvarChecklist() {
@@ -498,11 +499,11 @@ function salvarChecklist() {
                 ...formData
             };
 
-            let checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            let checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
             checklists.push(checklist);
-            localStorage.setItem('checklists_fastcar', JSON.stringify(checklists));
+            localStorage.setItem('checklists', JSON.stringify(checklists));
 
-            alert("âœ… Checklist salvo com sucesso no HistÃ³rico!");
+            alert("✅ Checklist salvo com sucesso no Histórico!");
             document.getElementById('checklistForm').reset();
             atualizarResumoVeiculo();
             switchTab('historico');
@@ -511,7 +512,7 @@ function salvarChecklist() {
         function carregarHistorico() {
             const listaDiv = document.getElementById('checklistsList');
             const emptyMsg = document.getElementById('emptyMessage');
-            const checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
 
             listaDiv.innerHTML = '';
 
@@ -530,12 +531,12 @@ function salvarChecklist() {
                 card.className = 'checklist-item';
                 card.innerHTML = `
                     <div class="checklist-info">
-                        <h4>${(item.placa || '').toUpperCase()} - ${item.modelo || 'Modelo nÃ£o inf.'}</h4>
-                        <p>ðŸ“… ${dataFormatada} Ã s ${horaFormatada} | ðŸ‘¤ ${item.nome_cliente || 'Cliente nÃ£o inf.'}</p>
+                        <h4>${(item.placa || '').toUpperCase()} - ${item.modelo || 'Modelo não inf.'}</h4>
+                        <p>📅 ${dataFormatada} às ${horaFormatada} | 👤 ${item.nome_cliente || 'Cliente não inf.'}</p>
                     </div>
                     <div class="checklist-actions">
-                        <button class="btn-small btn-secondary" onclick="carregarChecklist(${item.id})">âœï¸ Editar</button>
-                        <button class="btn-small btn-danger" onclick="excluirChecklist(${item.id})">ðŸ—‘ï¸</button>
+                        <button class="btn-small btn-secondary" onclick="carregarChecklist(${item.id})">✏️ Editar</button>
+                        <button class="btn-small btn-danger" onclick="excluirChecklist(${item.id})">🗑️</button>
                     </div>
                 `;
                 listaDiv.appendChild(card);
@@ -543,7 +544,7 @@ function salvarChecklist() {
         }
 
         function carregarChecklist(id) {
-            const checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
             const item = checklists.find(c => c.id === id);
 
             if (item) {
@@ -574,16 +575,16 @@ function salvarChecklist() {
 
         function excluirChecklist(id) {
             if (confirm("Tem certeza que deseja excluir este checklist?")) {
-                let checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+                let checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
                 checklists = checklists.filter(c => c.id !== id);
-                localStorage.setItem('checklists_fastcar', JSON.stringify(checklists));
+                localStorage.setItem('checklists', JSON.stringify(checklists));
                 carregarHistorico();
             }
         }
 
         function filtrarChecklists() {
             const termo = document.getElementById('searchInput').value.toLowerCase();
-            const checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
             const listaDiv = document.getElementById('checklistsList');
             const emptyMsg = document.getElementById('emptyMessage');
 
@@ -609,12 +610,12 @@ function salvarChecklist() {
                 card.className = 'checklist-item';
                 card.innerHTML = `
                     <div class="checklist-info">
-                        <h4>${(item.placa || '').toUpperCase()} - ${item.modelo || 'Modelo nÃ£o inf.'}</h4>
-                        <p>ðŸ“… ${dataFormatada} Ã s ${horaFormatada} | ðŸ‘¤ ${item.nome_cliente || 'Cliente nÃ£o inf.'}</p>
+                        <h4>${(item.placa || '').toUpperCase()} - ${item.modelo || 'Modelo não inf.'}</h4>
+                        <p>📅 ${dataFormatada} às ${horaFormatada} | 👤 ${item.nome_cliente || 'Cliente não inf.'}</p>
                     </div>
                     <div class="checklist-actions">
-                        <button class="btn-small btn-secondary" onclick="carregarChecklist(${item.id})">âœï¸ Editar</button>
-                        <button class="btn-small btn-danger" onclick="excluirChecklist(${item.id})">ðŸ—‘ï¸</button>
+                        <button class="btn-small btn-secondary" onclick="carregarChecklist(${item.id})">✏️ Editar</button>
+                        <button class="btn-small btn-danger" onclick="excluirChecklist(${item.id})">🗑️</button>
                     </div>
                 `;
                 listaDiv.appendChild(card);
@@ -622,7 +623,7 @@ function salvarChecklist() {
         }
 
         function ordenarChecklists() {
-            const checklists = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const checklists = JSON.parse(localStorage.getItem('checklists') || '[]');
             checklists.sort((a, b) => {
                 const placaA = (a.placa || '').toUpperCase();
                 const placaB = (b.placa || '').toUpperCase();
@@ -630,7 +631,7 @@ function salvarChecklist() {
                 if (placaA > placaB) return 1;
                 return 0;
             });
-            localStorage.setItem('checklists_fastcar', JSON.stringify(checklists));
+            localStorage.setItem('checklists', JSON.stringify(checklists));
             carregarHistorico();
         }
 
@@ -653,7 +654,7 @@ function salvarChecklist() {
 
             const opt = {
                 margin:       [0, 0, 0, 0],
-                filename:     'Checklist-FastCar-' + document.getElementById('placa').value + '.pdf',
+                filename:     'Checklist-' + document.getElementById('placa').value + '.pdf',
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  {
                     scale: 2,
@@ -687,37 +688,37 @@ function salvarChecklist() {
         }
 
         function limparFormulario() {
-            if (confirm("Limpar todos os campos do formulÃ¡rio?")) {
+            if (confirm("Limpar todos os campos do formulário?")) {
                 document.getElementById('checklistForm').reset();
                 atualizarResumoVeiculo();
             }
         }
 
         function exportarDados() {
-            const db = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const db = JSON.parse(localStorage.getItem('checklists') || '[]');
             if (!db.length) {
-                alert("NÃ£o hÃ¡ dados para exportar.");
+                alert("Não há dados para exportar.");
                 return;
             }
             const blob = new Blob([JSON.stringify(db, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'checklists_fastcar.json';
+            a.download = 'checklists.json';
             a.click();
             URL.revokeObjectURL(url);
         }
 
         function limparTodosDados() {
-            if (confirm("Deseja apagar TODO o histÃ³rico?")) {
-                localStorage.removeItem('checklists_fastcar');
+            if (confirm("Deseja apagar TODO o histórico?")) {
+                localStorage.removeItem('checklists');
                 carregarHistorico();
-                alert("HistÃ³rico limpo.");
+                alert("Histórico limpo.");
             }
         }
 
         function atualizarRelatorios() {
-            const db = JSON.parse(localStorage.getItem('checklists_fastcar') || '[]');
+            const db = JSON.parse(localStorage.getItem('checklists') || '[]');
 
             document.getElementById('totalChecklists').textContent = db.length;
 
@@ -734,7 +735,7 @@ function salvarChecklist() {
 
             const marcas = {};
             db.forEach(item => {
-                const modeloTexto = item.modelo || 'NÃ£o Informado';
+                const modeloTexto = item.modelo || 'Não Informado';
                 const m = modeloTexto.split(' ')[0].toUpperCase();
                 marcas[m] = (marcas[m] || 0) + 1;
             });
@@ -763,7 +764,7 @@ function salvarChecklist() {
             document.getElementById('graficoMarcas').innerHTML = htmlGrafico;
         }
 
-        // ORÃ‡AMENTO â€“ PEÃ‡AS & SERVIÃ‡OS (planilha simples)
+        // ORÇAMENTO – PEÇAS & SERVIÇOS (planilha simples)
         let itensOrcamento = [];
 
         function adicionarItemManual() {
@@ -774,12 +775,12 @@ function salvarChecklist() {
             const valor = parseFloat(valorInput.value || '0');
 
             if (!descricao) {
-                alert('Informe a peÃ§a/serviÃ§o.');
+                alert('Informe a peça/serviço.');
                 descricaoInput.focus();
                 return;
             }
             if (isNaN(valor) || valor < 0) {
-                alert('Informe um valor vÃ¡lido.');
+                alert('Informe um valor válido.');
                 valorInput.focus();
                 return;
             }
@@ -815,7 +816,7 @@ function salvarChecklist() {
                   <td style="border:1px solid #ddd; padding:6px;">${item.descricao}</td>
                   <td style="border:1px solid #ddd; padding:6px; text-align:right;">R$ ${item.valor.toFixed(2)}</td>
                   <td style="border:1px solid #ddd; padding:6px; text-align:center;">
-                    <button class="btn-small btn-danger" onclick="removerItem(${item.id})">ðŸ—‘ï¸</button>
+                    <button class="btn-small btn-danger" onclick="removerItem(${item.id})">🗑️</button>
                   </td>
                 `;
                 tbody.appendChild(tr);
@@ -825,7 +826,7 @@ function salvarChecklist() {
             totalSpan.textContent = 'R$ ' + totalGeral.toFixed(2);
         }
 
-        // ENTER nos campos de PeÃ§as & ServiÃ§os adiciona linha
+        // ENTER nos campos de Peças & Serviços adiciona linha
         document.addEventListener('DOMContentLoaded', () => {
             carregarHistorico();
             atualizarResumoVeiculo();
@@ -910,7 +911,7 @@ function iniciarCamera() {
         btnTirar.style.display = 'inline-block';
         video.play();
     }).catch(err => {
-        alert('Erro cÃ¢mera: ' + err.message + '\nUse "Galeria"');
+        alert('Erro câmera: ' + err.message + '\nUse "Galeria"');
     });
 }
 
@@ -968,7 +969,7 @@ function renderizarGaleria() {
     galeria.innerHTML = '';
     
     if (fotosVeiculo.length === 0) {
-        galeria.innerHTML = '<p style="text-align:center;color:#999;padding:40px">ðŸ“­ Nenhuma foto</p>';
+        galeria.innerHTML = '<p style="text-align:center;color:#999;padding:40px">📭 Nenhuma foto</p>';
         return;
     }
     
@@ -979,8 +980,8 @@ function renderizarGaleria() {
             <img src="${foto.dataURL}" alt="Foto ${index + 1}" loading="lazy">
             <div class="foto-overlay"><span style="color:white;font-size:11px">${foto.data}</span></div>
             <div class="foto-actions">
-                <button class="btn-foto btn-warning foto-zoom" data-url="${foto.dataURL}">ðŸ”</button>
-                <button class="btn-foto btn-danger foto-delete" data-id="${foto.id}">ðŸ—‘ï¸</button>
+                <button class="btn-foto btn-warning foto-zoom" data-url="${foto.dataURL}">🔍</button>
+                <button class="btn-foto btn-danger foto-delete" data-id="${foto.id}">🗑️</button>
             </div>
         `;
         galeria.appendChild(div);
@@ -999,15 +1000,15 @@ function removerFoto(id) {
     fotosVeiculo = fotosVeiculo.filter(f => f.id !== id);
     localStorage.setItem('fotosVeiculo', JSON.stringify(fotosVeiculo));
     renderizarGaleria();
-    mostrarAlerta('success', 'âœ… Foto removida!');
+    mostrarAlerta('success', '✅ Foto removida!');
 }
 
 function limparFotos() {
-    if (confirm('ðŸ—‘ï¸ Limpar TODAS as fotos?')) {
+    if (confirm('🗑️ Limpar TODAS as fotos?')) {
         fotosVeiculo = [];
         localStorage.removeItem('fotosVeiculo');
         renderizarGaleria();
-        mostrarAlerta('success', 'âœ… Fotos limpas!');
+        mostrarAlerta('success', '✅ Fotos limpas!');
     }
 }
 
@@ -1024,7 +1025,7 @@ function abrirFotoGrande(dataURL) {
             position:absolute; top:20px; right:20px; background:#e41616; 
             color:white; border:none; border-radius:50%; width:50px; 
             height:50px; font-size:20px; cursor:pointer;
-        ">âœ•</button>
+        ">✕</button>
     `;
     document.body.appendChild(modal);
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
@@ -1032,7 +1033,7 @@ function abrirFotoGrande(dataURL) {
 
 function gerarPDFFotos() {
     if (!fotosVeiculo || fotosVeiculo.length === 0) {
-        alert('ðŸ“­ Sem fotos para gerar PDF');
+        alert('📭 Sem fotos para gerar PDF');
         return;
     }
 
@@ -1045,7 +1046,7 @@ function gerarPDFFotos() {
 
     let html = '';
 
-    // Cada grupo de 4 fotos = 1 pÃ¡gina (2x2)
+    // Cada grupo de 4 fotos = 1 página (2x2)
     for (let i = 0; i < fotosUsar.length; i += 4) {
         const isLastGroup = i + 4 >= fotosUsar.length;
 
@@ -1058,7 +1059,7 @@ function gerarPDFFotos() {
                 font-family: Arial, sans-serif;
                 ${isLastGroup ? '' : 'page-break-after: always;'}
             ">
-                <!-- CABEÃ‡ALHO COM DADOS DO CARRO -->
+                <!-- CABEÇALHO COM DADOS DO CARRO -->
                 <div style="
                     background: #f5f5f5;
                     border: 2px solid #e41616;
@@ -1068,7 +1069,7 @@ function gerarPDFFotos() {
                     font-size: 11px;
                     line-height: 1.5;
                 ">
-                    <div style="font-weight: bold; color: #e41616; font-size: 12px; margin-bottom: 5px;">FAST CAR - INSPEÃ‡ÃƒO DE FOTOS</div>
+                    <div style="font-weight: bold; color: #e41616; font-size: 12px; margin-bottom: 5px;">- INSPEÇÃO DE FOTOS</div>
                     <div><strong>Placa:</strong> ${placa}</div>
                     <div><strong>Modelo:</strong> ${modelo}</div>
                     <div><strong>Chassi:</strong> ${chassi}</div>
@@ -1130,7 +1131,7 @@ function gerarPDFFotos() {
         }
     }).from(html).save();
 
-    mostrarAlerta('success', `âœ… PDF gerado com ${fotosUsar.length} fotos (mÃ¡ximo 16)`);
+    mostrarAlerta('success', `✅ PDF gerado com ${fotosUsar.length} fotos (máximo 16)`);
 }
 
 // INICIALIZAR FOTOS
@@ -1143,46 +1144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     </script>
 <button id="btnSalvarChecklist" onclick="salvarChecklist()">
-    ðŸ’¾ Salvar Checklist
+    💾 Salvar Checklist
 </button>
 <script src="config.js"></script>
-<script>
-// APLICA CONFIG DA OFICINA AUTOMATICAMENTE
-window.addEventListener('load', function() {
-    if (window.OFICINA_CONFIG) {
-        // Nome da oficina
-        document.getElementById('nome-oficina').textContent = window.OFICINA_CONFIG.nome;
-        document.getElementById('titulo-pagina').textContent = window.OFICINA_CONFIG.nome + ' - Checklist';
-        document.title = window.OFICINA_CONFIG.nome + ' - Checklist';
-        
-        // SubtÃ­tulo
-        if (window.OFICINA_CONFIG.subtitulo) {
-            document.getElementById('subtitulo-oficina').textContent = window.OFICINA_CONFIG.subtitulo;
-        }
-        
-        // EndereÃ§o
-        if (window.OFICINA_CONFIG.endereco) {
-            document.getElementById('endereco-oficina').textContent = window.OFICINA_CONFIG.endereco;
-        }
-        
-        // Telefone
-        if (window.OFICINA_CONFIG.telefone) {
-            document.getElementById('telefone-oficina').textContent = window.OFICINA_CONFIG.telefone;
-        }
-        
-        // Logo
-        if (window.OFICINA_CONFIG.logo) {
-            document.getElementById('logo-oficina').src = window.OFICINA_CONFIG.logo;
-        }
-        
-        // CORES DA LOGO VOLPINI
-        if (window.OFICINA_CONFIG.corPrimaria) {
-            document.documentElement.style.setProperty('--color-primary', window.OFICINA_CONFIG.corPrimaria);
-        }
-    }
-});
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
 
