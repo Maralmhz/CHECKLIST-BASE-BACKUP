@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Cor principal (usa sua var existente)
     if (cfg.corPrimaria) {
-        document.documentElement.style.setProperty('--color-primary', cfg.corPrimaria);
-    }
+    document.documentElement.style.setProperty('--color-primary', cfg.corPrimaria);
+}
+
 
 });
+
