@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (elNomeOficina && cfg.nome)      elNomeOficina.textContent = cfg.nome;
     if (elSubtitulo && cfg.subtitulo)   elSubtitulo.textContent = cfg.subtitulo;
     if (elTelefone && cfg.telefone)     elTelefone.textContent = cfg.telefone;
-    if (elEndereco && cfg.endereco)     elEndereco.textContent = cfg.endereco;
+    if (elEndereco && cfg.endereco)     elEndereco.innerHTML = cfg.endereco;  // innerHTML para tel formatado
 
     // Cor principal (usa sua var existente)
     if (cfg.corPrimaria) {
         document.documentElement.style.setProperty('--color-primary', cfg.corPrimaria);
     }
+
 });
